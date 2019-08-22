@@ -20,16 +20,12 @@ public class Palindrome {
      * <p>Пример: Madam, I'm Adam!</p>
      * <p>Результат: true</p>
      */
-    public static boolean isPalindrome(String text) {
+    public boolean isPalindrome(String text) {
         String reversedLine = text.replaceAll("[^\\w]+", "").trim().toLowerCase();
         StringBuilder stringBuilder = new StringBuilder(reversedLine);
         if (reversedLine.equals(stringBuilder.reverse().toString())) {
             return true;
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(isPalindrome("Madam, I'm Adam!"));
     }
 }
