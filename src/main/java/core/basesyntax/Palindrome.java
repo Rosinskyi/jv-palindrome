@@ -23,9 +23,6 @@ public class Palindrome {
     public boolean isPalindrome(String text) {
         String reversedLine = text.replaceAll("[^\\w]+", "").trim().toLowerCase();
         StringBuilder stringBuilder = new StringBuilder(reversedLine);
-        if (reversedLine.equals(stringBuilder.reverse().toString())) {
-            return true;
-        }
-        return false;
+        return reversedLine.equals(stringBuilder.reverse().toString());
     }
 }
